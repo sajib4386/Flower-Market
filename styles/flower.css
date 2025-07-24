@@ -17,12 +17,16 @@
 }
 
 /*header styles*/
-nav {
+.navbar,
+.banner {
+    max-width: 1140px;
+    margin: 0px auto;
+}
+
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: 150px;
-    margin-right: 150px;
 }
 
 nav ul {
@@ -47,3 +51,48 @@ nav ul li {
     color: rgba(137, 135, 161, 1);
 }
 
+/*banner related styles*/
+.banner{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 120px;
+}
+.banner-title{
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 13px;
+}
+.title-color{
+    color: rgba(233, 90, 8, 1);
+}
+.banner-subtitle{
+    font-size: 1.37rem;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+/*responsive related styles*/
+@media screen and (max-width:576px) {
+    /*header styles*/
+    .home,
+    .shop,
+    .about {
+        display: none;
+    }
+
+    .navbar {
+        align-items: center;
+        margin: 0px auto;
+    }
+    /*banner styles*/
+    .banner{
+        flex-direction: column-reverse;
+        margin-top: 30px;
+    }
+    .banner-title{
+        font-size: 1.5rem;
+    }
+    .banner-subtitle{
+        font-size: 1rem;
+    }
+
+}
