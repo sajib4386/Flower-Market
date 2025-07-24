@@ -19,7 +19,8 @@
 /*header styles*/
 .navbar,
 .banner,
-.section {
+.section,
+.plants-lover {
     max-width: 1140px;
     margin: 0px auto;
 }
@@ -141,6 +142,50 @@ nav ul li {
     border: none;
 }
 
+/*plants lover related styles*/
+.plants-lover{
+    display: flex;
+    margin-top: 170px;
+    gap: 60px;
+
+}
+.plants-lover-content{
+    margin-top: 0px;
+}
+.plants-lover-title{
+    padding-left: 20px;
+    font-size: 3.12rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.plants-lover-list{
+    font-size: 1.37rem;
+    color: rgba(0, 0, 0, 0.5);
+}
+ul li {
+    margin-bottom: 20px;
+}
+
+.image-container {
+    position: relative;
+  }
+
+ .main-image{
+    max-width: 540px;
+    width: 100%;
+    height: auto;
+  }
+.badge{
+    position: absolute;
+    width: 286px;
+    height: 286px;
+    top: -120px;
+    right: -120px;
+
+}
+
+
 /*responsive related styles*/
 @media screen and (max-width:576px) {
 
@@ -175,5 +220,23 @@ nav ul li {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         width: 100%;
+    }
+    /*plant lover styles*/
+    .plants-lover{
+     flex-direction: column;
+     margin-top: 41px;
+     gap: 0px;
+    }
+    .badge{
+        display: none;
+    }
+    .plants-lover-content{
+        margin-top: 18px;
+    }
+    .plants-lover-title{
+        font-size: 1.5rem;
+    }
+    .no-br{
+        display: none;
     }
 }
