@@ -21,7 +21,8 @@
 .banner,
 .section,
 .plants-lover,
-footer {
+footer,
+.latest-deal {
     max-width: 1140px;
     margin: 0px auto;
 }
@@ -32,13 +33,21 @@ footer {
     align-items: center;
 }
 
-nav ul {
-    display: flex;
-    gap: 48px;
+.logo-img {
+    height: 40px;
 }
 
-nav ul li {
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 24px;
     list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
 }
 
 .home {
@@ -54,11 +63,15 @@ nav ul li {
     color: rgba(137, 135, 161, 1);
 }
 
+.cart {
+    color: black;
+}
+
 /*banner related styles*/
 .banner {
     display: flex;
     justify-content: space-between;
-    margin-top: 120px;
+    margin-top: 50px;
 }
 
 .banner-title {
@@ -84,14 +97,14 @@ nav ul li {
 .section-title {
     font-size: 3.12rem;
     font-weight: bold;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .section-subtitle {
     text-align: center;
     font-size: 1.37rem;
     color: rgba(0, 0, 0, 0.5);
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .our {
@@ -131,7 +144,7 @@ nav ul li {
 .price {
     font-size: 1rem;
     font-weight: bold;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .btn-primary {
@@ -146,7 +159,7 @@ nav ul li {
 /*plants lover related styles*/
 .plants-lover {
     display: flex;
-    margin-top: 170px;
+    margin-top: 150px;
     gap: 60px;
 
 }
@@ -190,6 +203,106 @@ ul li {
 
 }
 
+/*latest deal styles*/
+.container {
+    display: flex;
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 80px;
+}
+
+.deal-section {
+    justify-items: center;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.deal-section h3 {
+    font-size: 3.12rem;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+.deal-section p {
+    font-size: 1.35rem;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.deal-section-title {
+    color: rgba(233, 90, 8, 1);
+}
+
+
+.left-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+}
+
+.right-section {
+    flex: 2;
+}
+
+.deal-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.deal-card .content {
+    position: absolute;
+    text-align: center;
+}
+
+.deal-card .content h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.deal-card .content h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.deal-card .content a {
+    color: white;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.zabo-shop {
+    font-size: 1.75rem;
+    font-weight: bolder;
+}
+
+.bloom {
+    background-image: url('../assets/deal-bloom.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.ana {
+    background-image: url('../assets/deal-ana.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.zabo {
+    background-image: url('../assets/deal-zabo.png');
+    background-size: cover;
+    background-position: center;
+    height: 419px;
+}
+
 /*join section styles*/
 .join-section {
     display: flex;
@@ -198,7 +311,7 @@ ul li {
     text-align: center;
     align-items: center;
     height: 500px;
-    margin-top: 120px;
+    margin-top: 100px;
 }
 
 .input-field {
@@ -267,21 +380,40 @@ footer {
 @media screen and (max-width:576px) {
 
     /*header styles*/
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        text-align: center;
+    }
+
     .home,
     .shop,
     .about {
         display: none;
     }
 
-    .navbar {
-        align-items: center;
-        margin: 0px auto;
+    .cart {
+        display: flex;
+    }
+
+    .logo img {
+        height: 40px;
     }
 
     /*banner styles*/
     .banner {
         flex-direction: column-reverse;
         margin-top: 30px;
+        margin-left: 10px;
     }
 
     .banner-title {
@@ -297,6 +429,12 @@ footer {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         width: 100%;
+    }
+    .section-br{
+        display: none;
+    }
+    .section-subtitle{
+        font-size: 1rem;
     }
 
     /*plant lover styles*/
@@ -315,12 +453,53 @@ footer {
     }
 
     .plants-lover-title {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
+        padding-left: 8px;
+    }
+    .plants-lover-list{
+        font-size: 1rem;
+        text-align: left;
+        margin-right: 10px;
     }
 
     .no-br {
         display: none;
     }
+
+    /*latest deal styles*/
+    .container {
+        flex-direction: column;
+    }
+    .deal-section p{
+        font-size: 1rem;
+    }
+
+    .off-br {
+        display: none;
+    }
+
+    .left-section {
+        padding: 10px;
+    }
+
+    .deal-card .content h2 {
+        font-size: 1.75rem;
+
+    }
+
+    .zabo {
+        height: 215px;
+    }
+
+    .zabo-shop {
+        font-size: 1rem;
+    }
+
+    .right-section {
+        padding: 10px;
+    }
+
+    /*join section styles*/
 
     .join-section {
         height: 300px;
@@ -349,6 +528,12 @@ footer {
         padding: 20px;
         margin-bottom: 150px;
     }
+    .footer-title{
+        font-size: 1rem;
+    }
+    .footer-br{
+        display: none;
+    }
 
     .footer-home,
     .footer-features {
@@ -365,4 +550,5 @@ footer {
     .footer-sponsor {
         align-self: flex-start;
     }
+
 }
